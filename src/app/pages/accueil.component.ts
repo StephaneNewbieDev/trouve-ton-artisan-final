@@ -42,6 +42,10 @@ import { RouterModule } from '@angular/router';
           </div>
         </div>
       </section>
+      <div class="text-center mt-5">
+  <a routerLink="/artisans" class="btn btn-primary">Voir tous les artisans</a>
+</div>
+
     </main>
 
     <app-footer></app-footer>
