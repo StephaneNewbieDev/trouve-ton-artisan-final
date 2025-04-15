@@ -11,5 +11,6 @@ export const routes: Routes = [
     { path: 'fabrication', component: CategorieComponent },
     { path: 'alimentation', component: CategorieComponent },
     { path: 'artisan/:id', component: ArtisanComponent },
+    { path: 'artisans', component: CategorieComponent },
     { path: '**', component: Page404Component } // toujours en dernier
 ];

@@ -49,11 +49,19 @@ export class CategorieComponent implements OnInit {
   ngOnInit(): void {
     this.route.url.subscribe(url => {
       this.currentCategory = url[0]?.path || '';
-      this.artisanService.getByCategory(this.currentCategory).subscribe(data => {
-        this.artisans = data;
-      });
+  
+      if (this.currentCategory === 'artisans') {
+        this.artisanService.getArtisans().subscribe(data => {
+          this.artisans = data;
+        });
+      } else {
+        this.artisanService.getByCategory(this.currentCategory).subscribe(data => {
+          this.artisans = data;
+        });
+      }
     });
   }
+  
 
   filteredArtisans(): Artisan[] {
     const search = this.searchText.toLowerCase();

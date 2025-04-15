@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Bootstrap */
+@import "bootstrap/scss/bootstrap";
+
+/* Variables de couleurs */
+:root {
+  --color-bg: #f1f8fc;
+  --color-primary: #0074c7;
+  --color-primary-dark: #00497c;
+  --color-gray-dark: #384050;
+  --color-red: #cd2c2e;
+  --color-green: #82b864;
+
+  --font-main: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+/* Style général */
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-main);
+  color: var(--color-gray-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Titres */
+h1, h2, h3 {
+  color: var(--color-primary-dark);
+}
+
+/* Liens */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Boutons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+  }
+  
+  .btn {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+  }
+  
